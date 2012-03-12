@@ -10,7 +10,7 @@
         $result = mysql_query("SELECT * FROM $tbl_city") 
                 or die(mysql_error());  
                 
-        
+        echo "city";
         echo "<table border='1' cellpadding='5' cellspacing='0'>";
         echo "<tr> <th>ID</th> <th>State</th> <th>City</th> <th></th> <th></th> </tr>";
 
@@ -33,6 +33,7 @@
                 echo '<td><a href="delete.php?id=' . $row['id'] . '"><input type=button value=Delete></a></td>';
                 echo "</tr>"; 
         } 
+        
 		
         echo "</table>";
 ?>
