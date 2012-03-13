@@ -106,7 +106,7 @@
  else
  {
  
- mysql_query("UPDATE $tbl_city SET state_id='$sid',name='$city'   WHERE id='$id'")
+ mysql_query("UPDATE $tbl_city SET state_id='$sid',name='$city',updated_at=now()  WHERE id='$id'")
  or die(mysql_error()); 
  
  header("Location: view.php"); 

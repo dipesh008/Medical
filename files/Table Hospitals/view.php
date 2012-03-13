@@ -8,12 +8,12 @@
 <?php
      include('dbinfo.php');
 	 
-	 $result = mysql_query("SELECT * FROM $tbl_hospitals") 
+	 $result = mysql_query("SELECT * FROM $tbl_hospitals order by created_at") 
 		or die(mysql_error());  	
 	 	
 		
 	echo "<table border='1' cellpadding='3' cellspacing='0'>";
-	echo "<tr> <th>Id</th> <th>Name</th> <th>State</th> <th>City</th> <th>Department</th>  
+	echo "<tr> <th>Id</th> <th>Name</th> <th>State</th> <th>City</th>  
 	</tr>";
 
 	$count=0;
@@ -39,23 +39,23 @@
 		echo '<td>' .$cname['name']. '</td>';
 	    
 		
-	    $deptt=mysql_query("select * from $tbl_hosdepart where hospital_id='$row[0]' ");
-		echo '<td>';
+	    //$deptt=mysql_query("select * from $tbl_hosdepart where hospital_id='$row[0]' ");
+		//echo '<td>';
 		
-		while($dep=mysql_fetch_array($deptt))
+		//while($dep=mysql_fetch_array($deptt))
 		
-		 {
-		        $departid= $dep['depart_id'];
-				$resultd = mysql_query("SELECT * FROM $tbl_departments where id='$departid'");
-                $depart=mysql_fetch_array($resultd)		   
-		        or die(mysql_error());  
-				echo $depart['name']."<br/>";
+		 //{
+		        //$departid= $dep['depart_id'];
+				//$resultd = mysql_query("SELECT * FROM $tbl_departments where id='$departid'");
+                //$depart=mysql_fetch_array($resultd)		   
+		        //or die(mysql_error());  
+				//echo $depart['name']."<br/>";
 		 
-		 }
+		 //}
 		        
 		       
 		
-		 echo '</td>';
+		 //echo '</td>';
 		//echo '<td>' . $row['address'] . '</td>';
 		//echo '<td>' . $row['email'] . '</td>';
 		//echo '<td>' . $row['phone'] . '</td>';

@@ -48,7 +48,7 @@
  }
  else
  {
- mysql_query("UPDATE $tbl_states SET name='$state'  WHERE id='$id'")
+ mysql_query("UPDATE $tbl_states SET name='$state',updated_at=now()  WHERE id='$id'")
  or die(mysql_error()); 
  
  header("Location: view.php"); 

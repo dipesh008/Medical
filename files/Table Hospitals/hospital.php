@@ -28,11 +28,12 @@ echo '<tr>'.'<td>Departments</td>';
 		while($dep=mysql_fetch_array($deptt))
 		
 		 {
-		        $departid= $dep['depart_id'];
+   		        $departid= $dep['depart_id'];
 				$resultd = mysql_query("SELECT * FROM $tbl_departments where id='$departid'");
                 $depart=mysql_fetch_array($resultd)		   
 		        or die(mysql_error());  
-				echo $depart['name'];
+			    echo $depart['name'] ."<br/>";
+			
 		 }
 		        
 		 echo '</td>';
@@ -44,7 +45,11 @@ echo '<tr>'  .'<td>Address</td>' .'<td>'. $row['address'] .'</td>' .'</tr>';
 
 echo '<tr>'  .'<td>Email</td>' .'<td>'. $row['email'] .'</td>' .'</tr>';
 
-echo '<tr>' .'<td>Phone</td>' .'<td>'.$row['phone'] .'</td>' .'</tr>';
+echo '<tr>' .'<td>Phone 1</td>' .'<td>'.$row['phone'] .'</td>' .'</tr>';
+
+echo '<tr>' .'<td>Phone 2</td>' .'<td>'.$row['phone1'] .'</td>' .'</tr>';
+
+echo '<tr>' .'<td>Fax</td>' .'<td>'.$row['fax'] .'</td>' .'</tr>';
 
 echo '<tr>'  .'<td>Other Info</td>' .'<td>'. $row['other_info'] .'</td>' .'</tr>';
 

@@ -10,9 +10,8 @@
         include('dbinfo.php');
 
         
-        $result = mysql_query("SELECT * FROM $tbl_hosdepart") 
+        $result = mysql_query("SELECT * FROM $tbl_hosdepart order by created_at") 
                 or die(mysql_error());  
-                
         
         
         echo "<table border='1' cellpadding='5' cellspacing='0'>";

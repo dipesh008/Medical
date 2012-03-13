@@ -7,10 +7,10 @@
 <p><a href=add.php?><input type=button value=Add></a></p>
 <?php
         include('dbinfo.php');
-        $result = mysql_query("SELECT * FROM $tbl_city") 
+        $result = mysql_query("SELECT * FROM $tbl_city order by created_at") 
                 or die(mysql_error());  
                 
-        echo "city";
+        
         echo "<table border='1' cellpadding='5' cellspacing='0'>";
         echo "<tr> <th>ID</th> <th>State</th> <th>City</th> <th></th> <th></th> </tr>";
 

@@ -7,7 +7,7 @@
 <p><a href=add.php?><input type=button value=Add></a></p>
 <?php
         include('dbinfo.php');
-        $result = mysql_query("SELECT * FROM $tbl_states") 
+        $result = mysql_query("SELECT * FROM $tbl_states order by created_at") 
                 or die(mysql_error());  
                 
         

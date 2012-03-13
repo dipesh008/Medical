@@ -148,7 +148,7 @@
  }
  else
  { 
- echo $query="UPDATE $tbl_hosdepart  SET depart_id='$did',hospital_id='$hid' WHERE id='$id'";
+ echo $query="UPDATE $tbl_hosdepart  SET depart_id='$did',hospital_id='$hid',updated_at=now() WHERE id='$id'";
   mysql_query($query) or die(mysql_error()); 
 
 

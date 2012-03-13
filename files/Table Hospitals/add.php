@@ -1,5 +1,5 @@
 <?php
- function renderForm($name,$state,$city,$address,$email,$phone,$oinfo,$error)
+ function renderForm($name,$state,$city,$address,$email,$phone,$phone1,$fax,$oinfo,$error)
  {
  ?>
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -96,6 +96,17 @@
 	   <td>Phone Number: *</td>
 	   <td><input type="text" name="phone" value="<?php echo $phone; ?>" /></td>
     </tr>
+	
+	
+	<tr>
+	   <td>Phone Number: *</td>
+	   <td><input type="text" name="phone1" value="<?php echo $phone1; ?>" /></td>
+    </tr>
+	
+	<tr>
+	   <td>Fax Number: *</td>
+	   <td><input type="text" name="fax" value="<?php echo $fax; ?>" /></td>
+    </tr>
 
     <tr>					  
         <td>Other Info.: *</td>
@@ -126,10 +137,12 @@
  $address = mysql_real_escape_string(htmlspecialchars($_POST['address']));
  $email = mysql_real_escape_string(htmlspecialchars($_POST['email']));
  $phone=mysql_real_escape_string($_POST['phone']);
+ $phone1=mysql_real_escape_string($_POST['phone1']);
+ $fax=mysql_real_escape_string($_POST['fax']);
  $oinfo = mysql_real_escape_string(htmlspecialchars($_POST['oinfo']));
  
  
- if ($name == '' || $state == '' ||  $city == '' ||  $address == '' || $email == '' ||  $phone == '' || $oinfo == '')
+ if ($name == '' || $state == '' ||  $city == '' ||  $address == '' || $email == '' ||  $phone == '' || $phone1 == '' || $fax == '' || $oinfo == '')
  {
  $error = 'ERROR: Please fill in all required fields!';
  
@@ -139,7 +152,7 @@
  else
  {
  
- mysql_query("INSERT into  $tbl_hospitals (name,state_id,city_id,address,email,phone,other_info) values('$name','$state','$city','$address','$email','$phone','$oinfo') ")
+ mysql_query("INSERT into  $tbl_hospitals (name,state_id,city_id,address,email,phone,phone1,fax,other_info) values('$name','$state','$city','$address','$email','$phone','$phone1','$fax','$oinfo') ")
  or die(mysql_error()); 
  
  
@@ -149,6 +162,6 @@
  else
  
  {
- renderForm('','','','','','','','');
+ renderForm('','','','','','','','','','');
  }
 ?> 
