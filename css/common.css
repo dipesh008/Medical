@@ -1,0 +1,64 @@
+.headerbar{
+	border:1px solid #000;
+	height: 100px;
+}
+.footerbar{
+	border:1px solid #000;
+	height:100px;
+}
+.container{
+	min-height:500px;
+	border:1px solid #000;
+}
+.sidebar{
+	width:200px;
+}
+.banner{
+	height:70px;
+}
+.mainmenu{
+	height:30px;
+}
+ul.sidenavigation{
+	list-style-type: none;
+	padding:0;
+	margin:10px 0;
+	position: relative;
+	left:-10px;
+	width:150px;
+}
+ul.sidenavigation li{
+    padding:5px 8px;
+    
+	//text-align: center;
+	background-color:#000;
+}
+ul.sidenavigation li a{
+	color:#fff;
+	text-decoration: none;
+}
+ul.sidenavigation li a:hover{
+color:#000fff;
+}
+.mainmenu ul{
+	list-style-type: none;
+	padding:0;
+	margin:0 10px;
+	text-align: center;
+}
+.mainmenu ul li{
+	padding:5px 8px;
+	display: inline;
+	text-align: center;
+	background-color:#000;
+	
+}
+
+.mainmenu ul li a{
+	color:#fff;
+	text-decoration: none;
+}
+.mainmenu ul li a:hover{
+	color:#000fff;
+	
+}
