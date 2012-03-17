@@ -1,0 +1,7 @@
+<!--#echo var="REQUEST_URI" --> <h1>Not Found please Click your Browsers Back Button</h1>
+<script language="javascript">
+location.replace("http://www.mountabuhotels.in/");
+</script>
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+--> 

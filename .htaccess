@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^hospitalsindia.net [NC]
+RewriteRule ^(.*)$ http://www.hospitalsindia.net/$1 [L,R=301]
+
+# Top Links Parsing
+RewriteRule index\.html$  index.php
+RewriteRule hospitals\.html$  hospitals.php
+# Hospitals Menu Links Parsing
+RewriteRule hospital-(.*)-(.*)-(.*)\.html$ hospitaldetail.php?id=$1&name=$2&city=$3
+
+# Main Menu Links Parsing
+#RewriteRule attractions-(.*)-(.*)-(.*)\.html$ attractions.php?id=$1&attraction=$2&destination=$3
+#RewriteRule excursions-(.*)-(.*)-(.*)\.html$ excursions.php?id=$1&excursion=$2&destination=$3
+# News Links Parsing
+#RewriteRule news-(.*)-(.*)-(.*)\.html$ news.php?id=$1&url=$2&destination=$3
