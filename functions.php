@@ -48,9 +48,24 @@ function load_footer(){
             </div>
         </footer>
     <?php
+    load_analytics();
 }
 function load_analytics(){
-    
+    echo'
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(["_setAccount", "UA-11990376-13"]);
+  _gaq.push(["_trackPageview"]);
+
+  (function() {
+    var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+    ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    ';
 }
 function get_cityname($id){
     include("config/dbinfo.php");
@@ -81,6 +96,13 @@ function display_hospitals(){
         <?php
     }
     
+}
+function get_hospitalname($id){
+    include("config/dbinfo.php");
+    $result=mysql_query("select * from $tbl_hospitals where id='$id' ") or die(mysql_error());
+    $row=mysql_fetch_array($result);
+    $name=$row['name'];
+    return  $name;
 }
 function show_hospital($id){
     include("config/dbinfo.php");

@@ -1,7 +1,7 @@
 <?php
- include("config/dbinfo.php");
- include("config/settings.php");
- include("functions.php");
+include("config/dbinfo.php");
+include("config/settings.php"); 
+include("functions.php");
 ?>
 <!doctype html>
 <html>

@@ -16,7 +16,7 @@
 <!doctype html>
 <html>
 	<head>
-        <title>Hospital India - Doctors, Phone Number, Hospital Ratings & List, Appointments</title>
+        <title><?php echo get_hospitalname($hospital_id); ?> - Hospital India - Doctors, Phone Number, Hospital Ratings & List, Appointments</title>
         <?php load_css()?>
         <?php load_scripts($ENV)?>
     </head>

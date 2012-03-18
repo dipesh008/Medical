@@ -1,3 +1,4 @@
+#Options +FollowSymlinks
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^hospitalsindia.net [NC]
 RewriteRule ^(.*)$ http://www.hospitalsindia.net/$1 [L,R=301]

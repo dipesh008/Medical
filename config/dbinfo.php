@@ -7,9 +7,9 @@ if($_SERVER['SERVER_NAME']=='localhost'){
 }
 else{
     $host="localhost";
-    $db_username="username";
-    $db_password="password";
-    $db="dbname";
+    $db_username="dipesh_medical";
+    $db_password="medical";
+    $db="dipesh_medical_prod";
 }
 // conecting to database
 mysql_connect("$host","$db_username","$db_password") or die('cannot connect to host');
