@@ -37,6 +37,26 @@ function load_header(){
                     </ul>
                 </div>
             </div>
+            <div>
+              <table>
+                   <tr>
+                    <td width="80px"><span style="font-weight: bold;">Share Us - </span></td>    
+                    <td width="50px"><a class='facebook' href='http://www.facebook.com/share.php?u=www.yocaller.com&title=YoCaller - Find Who is Calling You' target='_blank'><img src="images/facebook.png" title="Share On Facebook" /></a></td>
+                    <td width="50px"><a class='twitter' href='https://twitter.com/intent/tweet?hashtags=yocaller&source=tweetbutton&text=YoCaller%20-%20Find%20Who%20is%20Calling%20You.&url=www.yocaller.com&via=YOCaller.com' target='_blank'><img src="images/twitter.png" title="Share On Twitter" /></a></td>
+                    </tr>
+                 </table>
+                  <table>
+                   <tr>
+                    <td width="80px"><span style="font-weight: bold;">Like Us - </span></td>    
+                    <td width="100px">
+                       <iframe allowtransparency="true" frameborder="0" hspace="0" id="I1_1332188889389" marginheight="0" marginwidth="0" name="I1_1332188889389" scrolling="no" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.yocaller.com&amp;layout=button_count&amp;show_faces=false&amp;width=85&amp;action=like&amp;font=verdana&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="width: 90px; margin: 0px; border-style: none;height: 20px;  visibility: visible; " allowTransparency="true"></iframe>
+                    </td>
+                    <td width="100px">
+                    <iframe allowtransparency="true" frameborder="0" hspace="0" id="I1_1332188889389" marginheight="0" marginwidth="0" name="I1_1332188889389" scrolling="no" src="https://plusone.google.com/_/+1/fastbutton?url=http%3A%2F%2Fwww.yocaller.com&amp;size=medium&amp;count=true&amp;hl=en-US&amp;jsh=m%3B%2F_%2Fapps-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3D5LDYIFIy5nU.en.%2Fsv%3D1%2Fam%3D!brN6X75-Zu-IDRYPeA%2Fd%3D1#id=I1_1332188889389&amp;parent=http%3A%2F%2Fwww.ideophone.in&amp;rpctoken=153519974&amp;_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart" style="width: 90px; margin: 0px; border-style: none;height: 20px;  visibility: visible; "  title="+1"></iframe>
+                       </td>
+                    </tr>
+                 </table>
+                 </div>
         </header>
         <?php
 }

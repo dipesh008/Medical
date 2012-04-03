@@ -17,6 +17,8 @@
 <html>
 	<head>
         <title><?php echo get_hospitalname($hospital_id); ?> - Hospital India - Doctors, Phone Number, Hospital Ratings & List, Appointments</title>
+        <meta name="description" content="<?php echo get_hospitalname($hospital_id); ?> - Hospital India - Doctors, Phone Number, Hospital Ratings & List, Appointments" />
+        <meta name="keywords" content="<?php echo get_hospitalname($hospital_id); ?>,Hospitals,india,reviews,doctors,list,phone number,name,best,top,ratings,appointment" />
         <?php load_css()?>
         <?php load_scripts($ENV)?>
     </head>

@@ -7,6 +7,8 @@ include("functions.php");
 <html>
     <head>
         <title>Hospital India - Doctors, Phone Number, Hospital Ratings & List, Appointments</title>
+        <meta name="description" content="Hospital India - Doctors, Phone Number, Hospital Ratings & List, Appointments" />
+        <meta name="keywords" content="Hospitals,india,reviews,doctors,list,phone number,name,best,top,ratings,appointment" />
         <?php load_css()?>
         <?php load_scripts($ENV)?>
     </head>
