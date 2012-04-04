@@ -117,6 +117,42 @@ function display_hospitals(){
     }
     
 }
+function hospitals_by_state($id,$state){
+    include("config/dbinfo.php");
+    $result=mysql_query("select * from $tbl_hospitals where state_id='$id' order by created_at");
+    if(mysql_num_rows($result)==0){
+        echo 'No Record Found';
+    }
+    while($hospital=mysql_fetch_array($result))
+    {  $hospitalname=str_replace(' ','_', $hospital['name']);
+        $hoscity=get_cityname($hospital['city_id']);
+       $city=  str_replace(' ','_', $hoscity);
+     ?>
+        <div ><a href="hospital-<?php echo $hospital['id']; ?>-<?php echo $hospitalname; ?>-<?php echo $city; ?>.html" title="" ><?php echo $hospital['name']; ?></a></div>
+        <div ><span><?php echo get_cityname($hospital['city_id']); ?></span>,&nbsp;<span><?php echo get_statename($hospital['state_id']); ?></span></div>
+     
+        <?php
+    }
+    
+}
+function hospitals_by_city($id,$city){
+    include("config/dbinfo.php");
+    $result=mysql_query("select * from $tbl_hospitals where city_id='$id' order by created_at");
+    if(mysql_num_rows($result)==0){
+        echo 'No Record Found';
+    }
+    while($hospital=mysql_fetch_array($result))
+    {  $hospitalname=str_replace(' ','_', $hospital['name']);
+        $hoscity=get_cityname($hospital['city_id']);
+       $city=  str_replace(' ','_', $hoscity);
+     ?>
+        <div ><a href="hospital-<?php echo $hospital['id']; ?>-<?php echo $hospitalname; ?>-<?php echo $city; ?>.html" title="" ><?php echo $hospital['name']; ?></a></div>
+        <div ><span><?php echo get_cityname($hospital['city_id']); ?></span>,&nbsp;<span><?php echo get_statename($hospital['state_id']); ?></span></div>
+     
+        <?php
+    }
+    
+}
 function get_hospitalname($id){
     include("config/dbinfo.php");
     $result=mysql_query("select * from $tbl_hospitals where id='$id' ") or die(mysql_error());
@@ -169,11 +205,37 @@ echo '<tr>' .'<td>Fax</td>' .'<td>'.$row['fax'] .'</td>' .'</tr>';
 echo "</table>";
     
 }
+function states_list(){
+    include("config/dbinfo.php");   
+    $result=mysql_query("select * from $tbl_states");
+    echo'<div class="box"><ul>';
+    while($state=mysql_fetch_array($result)){
+        $sname=str_replace(' ', '_', $state['name']);
+        echo'<a href="hospitals-in-'.$state['id'].'-'.$sname.'-state.html"><li>Hospitals in '.$state['name'].'</li></a>';
+    }
+    echo'</ul></div>';
+}
+function city_list(){
+    include("config/dbinfo.php");   
+    $result=mysql_query("select * from $tbl_city");
+    echo'<div class="box"><ul>';
+    while($city=mysql_fetch_array($result)){
+        $sname=str_replace(' ', '_', $city['name']);
+        echo'<a href="hospitals-in-'.$city['id'].'-'.$sname.'-city.html"><li>Hospitals in '.$city['name'].'</li></a>';
+    }
+    echo'</ul></div>';
+}
 function get_totalstates(){
     include("config/dbinfo.php");   
     $result=mysql_query("select * from $tbl_states");
     $total_states=mysql_num_rows($result);
     return $total_states;
+}
+function is_state($id,$name){
+    return TRUE;
+}
+function is_city($id,$name){
+    return TRUE;
 }
 function get_totalcity(){
     include("config/dbinfo.php");   

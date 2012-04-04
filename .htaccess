@@ -8,6 +8,8 @@ RewriteRule index\.html$  index.php
 RewriteRule hospitals\.html$  hospitals.php
 # Hospitals Menu Links Parsing
 RewriteRule hospital-(.*)-(.*)-(.*)\.html$ hospitaldetail.php?id=$1&name=$2&city=$3
+RewriteRule hospitals-in-(.*)-(.*)-state\.html$ hospitals-by-state.php?id=$1&name=$2
+RewriteRule hospitals-in-(.*)-(.*)-city\.html$ hospitals-by-city.php?id=$1&name=$2
 
 # Main Menu Links Parsing
 #RewriteRule attractions-(.*)-(.*)-(.*)\.html$ attractions.php?id=$1&attraction=$2&destination=$3
